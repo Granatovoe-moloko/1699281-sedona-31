@@ -4,130 +4,137 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  
   <body>
-    <header>
-      <a href="#">
+    <header class="main-header">
+      <a href="#" class="logo">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип city of Sedona">
       </a>
-      <nav>
-        <ul>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
           <li>Информация</li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="#" class="link">Фото и видео</a></li>
+          <li><a href="#" class="link">Карта штата</a></li>
+          <li><a href="#" class="link">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <img src="img/greeting.svg" width="1200" height="433" alt="Welcome to the gorgeous Sedona">
-      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+    <main class="main-container">
+      <img src="img/greeting.svg" width="1200" height="433" alt="Welcome to the gorgeous Sedona" class="greeting">
 
       <section>
-        <h2>Преимущества</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-        <ol>
+        <div class="lead">
+        <h1 class="caption">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+        <h2 class="hidden-name">Преимущества</h2>
+        <p class="five-advantage">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+        <ol class="reason-list">
           <li>
-            <h3>Настоящий городок</h3>
-            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="box">
+              <h3 class="reason-gallery">Настоящий городок</h3>
+              <p class="reason-description-gallery">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <figure>
-              <img src="img/image-1.jpg" width="800" height="256" alt="Фотография города">
+              <img src="img/sedona-life.jpg" width="800" height="256" alt="Фотография города">
             </figure>
-            <ul>
+            <ul class="necessary-list">
               <li>
-                <h4>Жильё</h4>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <h4 class="necessary">Жильё</h4>
+                <p class="necessary-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li>
-                <h4>Еда</h4>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <h4 class="necessary">Еда</h4>
+                <p class="necessary-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <h4>Сувениры</h4>
-                <p>Не только китайского, но и местного производства!</p>
+                <h4 class="necessary">Сувениры</h4>
+                <p class="necessary-description">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li>
             <figure>
-              <img src="img/image-2.jpg" width="800" height="256" alt="Фотография каньона">
+              <img src="img/devil-bridge.jpg" width="800" height="256" alt="Фотография каньона">
             </figure>
-            <h3>Там есть Мост дьявола</h3>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="box">
+              <h3 class="reason-gallery">Там есть Мост дьявола</h3>
+              <p class="reason-description-gallery">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
           </li>
-          <li>
-            <h3>небольшая площадь</h3>
-            <p>все достопримечательности находятся очень близко</p>
+          <li class="special">
+            <h3 class="reason">небольшая площадь</h3>
+            <p class="reason-description">все достопримечательности находятся очень близко</p>
           </li>
-          <li>
-            <h3>красивая дорога</h3>
-            <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+          <li class="special">
+            <h3 class="reason">красивая дорога</h3>
+            <p class="reason-description">ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li>
-            <h3>мало туристов</h3>
-            <p>большинство едет в гранд каньон и толпится там</p>
+          <li class="special">
+            <h3 class="reason">мало туристов</h3>
+            <p class="reason-description">большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
       </section>
 
-      <section>
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <button type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
+      <section class="reserve">
+        <h2 class="interest">Заинтересовались?</h2>
+        <p class="text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <button type="button" class="search">ПОИСК ГОСТИНИЦЫ В седоне</button>
+        <form action="https://echo.htmlacademy.ru" method="post" class="form">
           <label for="check-in">Дата заезда:</label>
-          <input id="check-in" type="text" name="date check-in" value="24 апреля 2017">
+          <input id="check-in" type="text" name="date-check-in" value="24 апреля 2017" class="input date">
           <label for="exit">Дата выезда:</label>
-          <input id="exit" type="text" name="date exit" value="4 июля 2017">
+          <input id="exit" type="text" name="date-exit" value="4 июля 2017" class="input date">
           <label for="adult">Взрослые:</label>
-          <input id="adult" type="text" name="adult" value="2">
+          <input id="adult" type="text" name="adult" value="2" class="input visitor">
           <label for="children">Дети:</label>
-          <input id="children" type="text" name="children" value="0">
-          <button type="submit">Найти</button>
+          <input id="children" type="text" name="children" value="0" class="input visitor">
+          <button type="submit" class="find">Найти</button>
         </form>
       </section>
 
-      <section>
-        <h2>Карта проезда</h2>
+      <section class="map">
+        <h2 class="hidden-name">Карта проезда</h2>
         <a href="#">
           <img src="img/map.jpg" width="1199" height="594" alt="карта с адресом организации">
         </a>
       </section>
-      
+
     </main>
 
-    <footer>
-      <section>
-        <h2>Контакты</h2>
-        <p>#visitSEDONA</p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+    <footer class="footer">
+      <section class="contacts">
+        <h2 class="hidden-name">Контакты</h2>
+        <p class="hashtag">#visitSEDONA</p>
+        <a href="tel:+78005558628" class="link tel">+7 800 555-86-28</a>
       </section>
-      <section>
-        <h2>Мы в социальных сетях</h2>
-        <ul>
-          <li>
+      <section class="socials">
+        <h2 class="hidden-name">Мы в социальных сетях</h2>
+        <ul class="social-list">
+          <li class="link-social">
             <a href="#">
-              <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter">
+              <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter" class="icon-social">
             </a>
           </li>
-          <li>
+          <li class="link-social">
             <a href="#">
-              <img src="img/socials/fb.svg" width="20" height="16" alt="Facebook">
+              <img src="img/socials/fb.svg" width="20" height="16" alt="Facebook" class="icon-social">
             </a>
           </li>
-          <li>
+          <li class="link-social">
             <a href="#">
-              <img src="img/socials/youtube.svg" width="17" height="17" alt="YouTube">
+              <img src="img/socials/youtube.svg" width="17" height="17" alt="YouTube" class="icon-social">
             </a>
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Website by</h2>
+      <section class="site">
+        <h2 class="website">Website by</h2>
         <a href="https://htmlacademy.ru">
-          <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="логотип htmlacademy">
+          <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="логотип htmlacademy" class="logo-htmlacademy">
         </a>
       </section>
     </footer>
