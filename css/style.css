@@ -51,17 +51,24 @@ body {
   height: 70px;
 }
 
-/* не вышло
+
 .greeting {
-  background-image: url("img/index.jpg");
+  background-image: url("../img/index.jpg");
 }
-*/
+
 .site-navigation {
   list-style: none;
 }
-.link {
+.link,
+.navigation-link {
   text-decoration: none;
   color: inherit;
+}
+.navigation-link:hover {
+  color: var(--blue);
+}
+.navigation-link:focus {
+  opacity: 0,3;
 }
 
 .caption {
@@ -142,7 +149,7 @@ body {
 .search:hover {
   background-color: var(--dark-brown);
 }
-.search:active {
+.search:focus {
   background-color: var(--extra-dark-brown);
 }
 .form {
@@ -153,11 +160,10 @@ body {
   width: 346px;
   height: 38px;
   background-color: var(--light-gray);
-  /* тоже не вышло
-  background-image: url("img/icon/calendar.svg")
+  background-image: url("../img/icon/calendar.svg");
   background-position: 316px center;
   background-repeat: no-repeat;
-  */
+
 }
 .visitor {
   width: 114px;
@@ -168,11 +174,11 @@ body {
 .input:hover {
   background-color: var(--hover-gray);
 }
-/* не работает
-.input:active {
+
+.input:focus {
   background-color: var(--gray-for-line);
 }
-*/
+
 .find {
   width: 458px;
   height: 58px;
@@ -184,7 +190,7 @@ body {
 .find:hover {
   background-color: var(--dark-blue);
 }
-.find:active {
+.find:focus {
   background-color: var(--extra-dark-blue);
 }
 .map {
@@ -198,21 +204,26 @@ body {
 .hashtag {
   font-size: 21px;
 }
-.social-list {
+.filter-list,
+.social-list,
+.housing-list {
   list-style: none;
 }
 .link-social {
   width: 46px;
   height: 48px;
   background-color: var(--blue);
+  text-align: center;
 }
 .link-social:hover {
   background-color: var(--dark-blue);
 }
-.link-social:active {
+.link-social:focus {
   background-color: var(--extra-dark-blue);
 }
-.tel {
+.tel,
+.result,
+.housing-name {
   font-size: 21px;
 }
 .website {
@@ -220,3 +231,98 @@ body {
   font-size: inherit;
 }
 
+.filters {
+  width: 1200px;
+  height: 217px;
+  background-image: url("../img/filter-background.jpg");
+}
+.current-page {
+  color: var(--brown);
+}
+.parameter {
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--white);
+}
+.sort-box {
+  width: 1200px;
+  height: 87px;
+}
+.option,
+.view {
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.sort {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.sort:hover {
+  color: var(--blue);
+  border-bottom: 1px dashed var(--blue);
+}
+sort:focus {
+  color: var(--black);
+  border-bottom: none;
+
+}
+.active {
+  color: var(--blue);
+}
+.inactive {
+  border-bottom: 1px dashed var(--blue);
+}
+.search-results {
+  width: 1200px;
+  height: 454px;
+}
+.housing-name:hover {
+  color: var(--blue);
+}
+.housing-name:focus {
+  opacity: 0,3;
+}
+.housing-parametres {
+  line-height: 21;
+  font-weight: 400;
+  color: var(--dark);
+}
+.details {
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  line-height: 21px;
+  color: var(--white);
+  background-color: var(--blue);
+}
+.details:hover {
+  background-color: var(--dark-blue);
+}
+.details:focus {
+  background-color: var(--extra-dark-blue);
+}
+.book {
+  width: 142px;
+  height: 27px;
+  text-align: center;
+  line-height: 21px;
+  color: var(--white);
+  background-color: var(--brown);
+}
+.book:hover {
+  background-color: var(--dark-brown);
+}
+.book:focus {
+  background-color: var(--extra-dark-brown);
+}
+.rating {
+  width: 110px;
+  height: 27px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+}

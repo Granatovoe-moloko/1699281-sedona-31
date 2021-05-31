@@ -4,63 +4,65 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="icon" href="favicon.ico">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  
+
   <body>
-    <header>
-      <a href="index.html">
+    <header class="main-header">
+      <a href="index.html" class="logo">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип city of Sedona">
       </a>
-      <nav>
-        <ul>
-          <li>Информация</li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
+          <li><a href="#" class="navigation-link">Информация</a></li>
+          <li><a href="#" class="navigation-link">Фото и видео</a></li>
+          <li><a href="#" class="navigation-link">Карта штата</a></li>
+          <li><a href="#" class="navigation-link current-page">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Фильтры</h2>
+        <section class="filters">
+            <h2 class="hidden-name">Фильтры</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
-                    <legend>Инфраструктура:</legend>
-                    <ul>
+                    <legend class="parameter">Инфраструктура:</legend>
+                    <ul class="filter-list">
                         <li>
-                            <input id="swimming-pool" type="checkbox" name="pool" checked>
-                            <label for="swimming-pool">Бассейн</label>
+                            <input id="swimming-pool" type="checkbox" name="pool" checked class="check">
+                            <label for="swimming-pool" class="option">Бассейн</label>
                         </li>
                         <li>
-                            <input id="parking-lot" type="checkbox" name="parking">
-                            <label for="parking-lot">Парковка</label>
+                            <input id="parking-lot" type="checkbox" name="parking" class="check">
+                            <label for="parking-lot" class="option">Парковка</label>
                         </li>
                         <li>
-                            <input id="wi-Fi" type="checkbox" name="wi-Fi">
-                            <label for="wi-Fi">Wi-Fi</label>
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Тип жилья:</legend>
-                    <ul>
-                        <li>
-                            <input id="hotel" type="checkbox" name="hotel" checked>
-                            <label for="hotel">Гостиница</label>
-                        </li>
-                        <li>
-                            <input id="the-motel" type="checkbox" name="motel" checked>
-                            <label for="the-motel">Мотель</label>
-                        </li>
-                        <li>
-                            <input id="apartments" type="checkbox" name="apartments" checked>
-                            <label for="apartments">Апартаменты</label>
+                            <input id="wi-Fi" type="checkbox" name="wi-Fi" class="check">
+                            <label for="wi-Fi" class="option">Wi-Fi</label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Стоимость в сутки, ₽:</legend>
+                    <legend class="parameter">Тип жилья:</legend>
+                    <ul class="filter-list">
+                        <li>
+                            <input id="hotel" type="checkbox" name="hotel" checked class="check">
+                            <label for="hotel" class="option">Гостиница</label>
+                        </li>
+                        <li>
+                            <input id="the-motel" type="checkbox" name="motel" checked class="check">
+                            <label for="the-motel" class="option">Мотель</label>
+                        </li>
+                        <li>
+                            <input id="apartments" type="checkbox" name="apartments" checked class="check">
+                            <label for="apartments" class="option">Апартаменты</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="parameter">Стоимость в сутки, ₽:</legend>
                     <table>
                       <tr>
                         <td>От</td>
@@ -69,96 +71,103 @@
                     </table>
                     <input type="range" min="0" max="3000" step="1" value="100">
                 </fieldset>
-                <button type="submit">Показать</button>
+                <button type="submit" class="view">Показать</button>
             </form>
         </section>
 
-        <section>
-            <h2>Найдено: 3</h2>
-            <p>Сортировка:</p>
-            <ul>
-                <li><a href="#">По цене</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По рейтингу</a></li>
+        <section class="sort-box">
+            <h2 class="result">Найдено: 3</h2>
+            <p class="sort">Сортировка:</p>
+            <ul class="filter-list">
+                <li><a href="#" class="sort active link">По цене</a></li>
+                <li><a href="#" class="sort inactive link">По типу</a></li>
+                <li><a href="#" class="sort inactive link">По рейтингу</a></li>
             </ul>
             <input type="checkbox" name="direct" checked>
             <input type="checkbox" name="reverse">
-            
+
         </section>
 
-        <section>
-            <h2>Результаты поиска</h2>
-            <ul>
+        <section class="search-results">
+            <h2 class="hidden-name">Результаты поиска</h2>
+            <ul class="housing-list">
                 <li>
                     <p>
                     <img src="img/catalog/catalog-item-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
                     </p>
-                    <h3>Amara Resort & Spa</h3>
-                    <p>Гостиница</p>
-                    <p>От 4000 ₽</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <p>
+                      <a href=# class="housing-name link">Amara Resort & Spa</a>
+                    </p>
+                    <p class="housing-parametres">Гостиница</p>
+                    <p class="housing-parametres">От 4000 ₽</p>
+                    <button type="button" class="details">Подробнее</button>
+                    <button type="button" class="book">Забронировать</button>
                     <p>4 звезды</p>
-                    <p>Рейтинг: 8,5</p>
+                    <p class="rating">Рейтинг: 8,5</p>
                 </li>
                 <li>
                     <p>
                     <img src="img/catalog/catalog-item-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                     </p>
-                    <h3>Desert Quail Inn</h3>
-                    <p>Мотель</p>
-                    <p>От 3000 ₽</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <p>
+                      <a href=# class="housing-name link">Desert Quail Inn</a>
+                    </p>
+                    <p class="housing-parametres">Мотель</p>
+                    <p class="housing-parametres">От 3000 ₽</p>
+                    <button type="button" class="details">Подробнее</button>
+                    <button type="button" class="book">Забронировать</button>
                     <p>3 звезды</p>
-                    <p>Рейтинг: 8,9</p>
+                    <p class="rating">Рейтинг: 8,9</p>
                 </li>
                 <li>
                     <p>
                     <img src="img/catalog/catalog-item-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                     </p>
-                    <h3>Villas at Poco Diablo</h3>
-                    <p>Апартаменты</p>
-                    <p>От 2000 ₽</p>
-                    <button type="button">Подробнее</button>
-                    <button type="button">Забронировать</button>
+                    <p>
+                      <a href=# class="housing-name link">Villas at Poco Diablo</a>
+                    </p>
+                    <p class="housing-parametres">Апартаменты</p>
+                    <p class="housing-parametres">От 2000 ₽</p>
+                    <button type="button" class="details">Подробнее</button>
+                    <button type="button" class="book">Забронировать</button>
                     <p>2 звезды</p>
-                    <p>Рейтинг: 9,2</p>
+                    <p class="rating">Рейтинг: 9,2</p>
                 </li>
             </ul>
         </section>
 
     </main>
-    <footer>
-        <section>
-          <h2>Контакты</h2>
-          <p>#visitSEDONA</p>
-          <a href="tel:+78005558628">+7 800 555-86-28</a>
+
+    <footer class="footer">
+        <section class="contacts">
+          <h2 class="hidden-name">Контакты</h2>
+          <p class="hashtag">#visitSEDONA</p>
+          <a href="tel:+78005558628" class="link tel">+7 800 555-86-28</a>
         </section>
-        <section>
-          <h2>Мы в социальных сетях</h2>
-          <ul>
+        <section class="socials">
+          <h2 class="hidden-name">Мы в социальных сетях</h2>
+          <ul class="social-list">
             <li>
-              <a href="#">
+              <a href="#" class="link-social">
                 <img src="img/socials/twitter.svg" width="17" height="17" alt="Twitter">
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="link-social">
                 <img src="img/socials/fb.svg" width="20" height="16" alt="Facebook">
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="link-social">
                 <img src="img/socials/youtube.svg" width="17" height="17" alt="YouTube">
               </a>
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Website by</h2>
+        <section class="site">
+          <h2 class="website">Website by</h2>
           <a href="https://htmlacademy.ru">
-            <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="логотип htmlacademy">
+            <img src="img/logo-htmlacademy.svg" width="115" height="33" alt="логотип htmlacademy" class="logo-htmlacademy">
           </a>
         </section>
       </footer>
