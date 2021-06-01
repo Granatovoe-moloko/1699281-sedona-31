@@ -46,12 +46,10 @@ body {
   text-transform: uppercase;
   background-color: var(--white);
 }
+
 .main-header {
   width: 1200px;
-  height: 70px;
 }
-
-
 .greeting {
   background-image: url("../img/index.jpg");
 }
@@ -59,16 +57,22 @@ body {
 .site-navigation {
   list-style: none;
 }
-.link,
-.navigation-link {
+.link{
   text-decoration: none;
   color: inherit;
 }
-.navigation-link:hover {
+.navigation-link {
+  text-decoration: none;
+  color: var(--brown);
+}
+.navigation-link[href] {
+  color: var(--black);
+}
+.navigation-link[href]:hover {
   color: var(--blue);
 }
-.navigation-link:focus {
-  opacity: 0,3;
+.navigation-link[href]:focus {
+  opacity: 0.3;
 }
 
 .caption {
@@ -131,8 +135,7 @@ body {
 }
 .text {
   line-height: 24px;
-  /* здесь в макете указано "mixed"
-  font-size: ;
+  /*font-size: 30px;
   font-weight: ;
   color: var();
   */
@@ -145,6 +148,7 @@ body {
   color: var(--white);
   background-color: var(--brown);
   text-transform: uppercase;
+  border: none;
 }
 .search:hover {
   background-color: var(--dark-brown);
@@ -171,12 +175,16 @@ body {
   background-color: var(--light-gray);
 }
 
+.input {
+  border: none;
+}
+
 .input:hover {
   background-color: var(--hover-gray);
 }
 
 .input:focus {
-  background-color: var(--gray-for-line);
+  background-color: var(--white);
 }
 
 .find {
@@ -186,6 +194,7 @@ body {
   font-size: 21px;
   color: var(--white);
   background-color: var(--blue);
+  border: none;
 }
 .find:hover {
   background-color: var(--dark-blue);
@@ -199,7 +208,6 @@ body {
 }
 .footer {
   width: 1200px;
-  height: 120px;
 }
 .hashtag {
   font-size: 21px;
@@ -233,8 +241,8 @@ body {
 
 .filters {
   width: 1200px;
-  height: 217px;
   background-image: url("../img/filter-background.jpg");
+  background-size: cover;
 }
 .current-page {
   color: var(--brown);
@@ -246,7 +254,6 @@ body {
 }
 .sort-box {
   width: 1200px;
-  height: 87px;
 }
 .option,
 .view {
@@ -254,17 +261,22 @@ body {
   font-weight: 400;
   color: var(--white);
 }
+.view {
+  border: 2px solid var(--white);
+  background: transparent;
+}
 
-.sort {
+.sorting-link {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  text-decoration: none;
 }
-.sort:hover {
+.sorting-link:hover {
   color: var(--blue);
   border-bottom: 1px dashed var(--blue);
 }
-sort:focus {
+.sorting-link:focus {
   color: var(--black);
   border-bottom: none;
 
@@ -274,19 +286,22 @@ sort:focus {
 }
 .inactive {
   border-bottom: 1px dashed var(--blue);
+  opacity: 0.3;
+}
+.inactive:hover {
+  opacity: 1;
 }
 .search-results {
   width: 1200px;
-  height: 454px;
 }
 .housing-name:hover {
   color: var(--blue);
 }
 .housing-name:focus {
-  opacity: 0,3;
+  opacity: 0.3;
 }
 .housing-parametres {
-  line-height: 21;
+  line-height: 21px;
   font-weight: 400;
   color: var(--dark);
 }
@@ -297,6 +312,7 @@ sort:focus {
   line-height: 21px;
   color: var(--white);
   background-color: var(--blue);
+  border: none;
 }
 .details:hover {
   background-color: var(--dark-blue);
@@ -311,6 +327,7 @@ sort:focus {
   line-height: 21px;
   color: var(--white);
   background-color: var(--brown);
+  border: none;
 }
 .book:hover {
   background-color: var(--dark-brown);
