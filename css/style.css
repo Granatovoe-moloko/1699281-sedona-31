@@ -115,6 +115,8 @@ body {
   text-align: center;
   font-weight: 400;
   color: var(--dark);
+  padding: 0;
+  margin: 0;
   margin-bottom: 51px;
 }
 .reason-list {
@@ -184,6 +186,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: var(--white);
+  padding: 0;
+  margin: 0;
 }
 .reason {
   font-size: 21px;
@@ -196,6 +200,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: var(--dark);
+  padding: 0;
+  margin: 0;
 }
 .special {
   background-color: var(--extra-light-gray);
@@ -211,6 +217,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: var(--dark);
+  padding: 0;
+  margin: 0;
 }
 .box {
   background-color: var(--blue);
@@ -232,6 +240,8 @@ body {
   line-height: 24px;
   justify-self: center;
   text-align: center;
+  padding: 0;
+  margin: 0;
   /*font-size: 30px;
   font-weight: ;
   color: var();
@@ -323,6 +333,8 @@ body {
 }
 .hashtag {
   font-size: 21px;
+  margin: 0;
+  padding: 0;
 }
 .filter-list,
 .social-list,
@@ -354,11 +366,56 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.main {
+  outline: 5px solid blueviolet;
+}
 .filters {
   width: 1200px;
   background-image: url("../img/filter-background.jpg");
   background-size: cover;
+}
+.filter-form {
+  display: grid;
+  grid-template-columns: 200px 400px 600px;
+  grid-template-rows: 149px 68px;
+}
+.infrastructure-field {
+  outline: 5px solid royalblue;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin-left: 73px;
+  margin-top: 27px;
+  border: none;
+}
+.type-house-field{
+  outline: 5px solid goldenrod;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  justify-self: center;
+  margin-top: 27px;
+  border: none;
+}
+.cost-field {
+  outline: 5px solid forestgreen;
+  width: 317px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  justify-self: end;
+  margin-right: 73px;
+  margin-top: 27px;
+  border: none;
+}
+.view {
+  text-transform: uppercase;
+  width: 137px;
+  height: 36px;
+  border: 2px solid var(--white);
+  background: transparent;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: end;
+  margin-right: 168px;
+  margin-bottom: 40px;
 }
 .current-page {
   color: var(--brown);
@@ -369,7 +426,18 @@ body {
   color: var(--white);
 }
 .sort-box {
+  outline: 5px solid orange;
   width: 1200px;
+  padding: 29px 73px 31px;
+}
+.filter-item {
+  margin-right: 32px;
+}
+.result,
+.sort,
+.filter-list,
+.filter-item {
+  display: inline-block;
 }
 .option,
 .view {
@@ -377,11 +445,19 @@ body {
   font-weight: 400;
   color: var(--white);
 }
-.view {
-  border: 2px solid var(--white);
-  background: transparent;
+.result,
+.sort,
+.wrap,
+.rating {
+  margin: 0;
+  padding: 0;
 }
-
+.result{
+  margin-right: 46px;
+}
+.sort {
+  margin-right: 40px;
+}
 .sorting-link {
   font-size: 12px;
   line-height: 18px;
@@ -410,6 +486,33 @@ body {
 .search-results {
   width: 1200px;
 }
+.housing-list {
+  display: grid;
+  grid-template-columns: 113px 1fr 113px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.housing-item-1 {
+ grid-column: 2/3;
+ grid-row: 1/2;
+ padding: 30px 0px;
+ outline: 5px solid teal;
+}
+.housing-item-2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 30px 0px;
+  outline: 5px solid lightcoral;
+ }
+ .housing-item-3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding: 30px 0px;
+  outline: 5px solid plum;
+ }
+.title-housing {
+  margin: 0;
+  padding: 0;
+}
 .housing-name:hover {
   color: var(--blue);
 }
@@ -420,6 +523,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: var(--dark);
+  margin: 0;
+  padding: 0;
 }
 .details {
   width: 110px;

@@ -23,11 +23,11 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main">
         <section class="filters">
             <h2 class="hidden-name">Фильтры</h2>
-            <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset>
+            <form method="get" action="https://echo.htmlacademy.ru" class="filter-form">
+                <fieldset class="infrastructure-field">
                     <legend class="parameter">Инфраструктура:</legend>
                     <ul class="filter-list">
                         <li>
@@ -44,7 +44,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="type-house-field">
                     <legend class="parameter">Тип жилья:</legend>
                     <ul class="filter-list">
                         <li>
@@ -61,7 +61,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="cost-field">
                     <legend class="parameter">Стоимость в сутки, ₽:</legend>
                     <table>
                       <tr>
@@ -79,9 +79,9 @@
             <h2 class="result">Найдено: 3</h2>
             <p class="sort">Сортировка:</p>
             <ul class="filter-list">
-                <li><a href="#" class="sorting-link active">По цене</a></li>
-                <li><a href="#" class="sorting-link inactive">По типу</a></li>
-                <li><a href="#" class="sorting-link inactive">По рейтингу</a></li>
+                <li class="filter-item"><a href="#" class="sorting-link active">По цене</a></li>
+                <li class="filter-item"><a href="#" class="sorting-link inactive">По типу</a></li>
+                <li class="filter-item"><a href="#" class="sorting-link inactive">По рейтингу</a></li>
             </ul>
             <div class="direct"></div>
             <div class="reverse"></div>
@@ -90,46 +90,40 @@
         <section class="search-results">
             <h2 class="hidden-name">Результаты поиска</h2>
             <ul class="housing-list">
-                <li>
-                    <p>
+                <li class="housing-item-1">
+                    <p class="wrap">
                     <img src="img/catalog/catalog-item-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
                     </p>
-                    <p>
-                      <h3><a href=# class="housing-name link">Amara Resort & Spa</a></h3>
-                    </p>
+                    <h3 class="title-housing"><a href=# class="housing-name link">Amara Resort & Spa</a></h3>
                     <p class="housing-parametres">Гостиница</p>
                     <p class="housing-parametres">От 4000 ₽</p>
                     <button type="button" class="details">Подробнее</button>
                     <button type="button" class="book">Забронировать</button>
-                    <p>4 звезды</p>
+                    <p class="wrap">4 звезды</p>
                     <p class="rating">Рейтинг: 8,5</p>
                 </li>
-                <li>
-                    <p>
-                    <img src="img/catalog/catalog-item-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+                <li class="housing-item-2">
+                    <p class="wrap">
+                      <img src="img/catalog/catalog-item-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                     </p>
-                    <p>
-                      <h3><a href=# class="housing-name link">Desert Quail Inn</a></h3>
-                    </p>
+                    <h3 class="title-housing"><a href=# class="housing-name link">Desert Quail Inn</a></h3>
                     <p class="housing-parametres">Мотель</p>
                     <p class="housing-parametres">От 3000 ₽</p>
                     <button type="button" class="details">Подробнее</button>
                     <button type="button" class="book">Забронировать</button>
-                    <p>3 звезды</p>
+                    <p class="wrap">3 звезды</p>
                     <p class="rating">Рейтинг: 8,9</p>
                 </li>
-                <li>
-                    <p>
+                <li class="housing-item-3">
+                    <p class="wrap">
                     <img src="img/catalog/catalog-item-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                     </p>
-                    <p>
-                      <h3><a href=# class="housing-name link">Villas at Poco Diablo</a></h3>
-                    </p>
+                    <h3 class="title-housing"><a href=# class="housing-name link">Villas at Poco Diablo</a></h3>
                     <p class="housing-parametres">Апартаменты</p>
                     <p class="housing-parametres">От 2000 ₽</p>
                     <button type="button" class="details">Подробнее</button>
                     <button type="button" class="book">Забронировать</button>
-                    <p>2 звезды</p>
+                    <p class="wrap">2 звезды</p>
                     <p class="rating">Рейтинг: 9,2</p>
                 </li>
             </ul>
