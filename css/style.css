@@ -39,13 +39,14 @@
 }
 
 body {
-  /*min-width: 1200px;
+  /*
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  margin: 0;
   padding: 0;*/
+  width: 1200px;
+  margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -56,16 +57,10 @@ body {
 }
 
 .main-header {
-  width: 1200px;
   display: grid;
-  outline: 5px solid greenyellow;
 }
-.main-container {
-  outline: 5px solid blueviolet;
-}
+
 .footer {
-  width: 1200px;
-  outline: 5px solid red;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 120px;
@@ -316,18 +311,15 @@ body {
   height: 594px;
 }
 .contacts {
-  outline: 5px solid yellow;
   width: 200px;
   grid-column: 1/2;
   justify-self: center;
 }
 .socials {
-  outline: 5px solid yellowgreen;
   grid-column: 2/3;
   justify-self: center;
 }
 .site {
-  outline: 5px solid pink;
   grid-column: 3/4;
   justify-self: center;
 }
@@ -366,43 +358,34 @@ body {
   margin: 0;
   padding: 0;
 }
-.main {
-  outline: 5px solid blueviolet;
-}
+
 .filters {
-  width: 1200px;
   background-image: url("../img/filter-background.jpg");
   background-size: cover;
+
 }
 .filter-form {
   display: grid;
   grid-template-columns: 200px 400px 600px;
   grid-template-rows: 149px 68px;
+  padding: 27px 73px 31px 73px;
 }
 .infrastructure-field {
-  outline: 5px solid royalblue;
   grid-column: 1/2;
   grid-row: 1/3;
-  margin-left: 73px;
-  margin-top: 27px;
   border: none;
 }
 .type-house-field{
-  outline: 5px solid goldenrod;
   grid-column: 2/3;
   grid-row: 1/3;
   justify-self: center;
-  margin-top: 27px;
   border: none;
 }
 .cost-field {
-  outline: 5px solid forestgreen;
   width: 317px;
   grid-column: 3/4;
   grid-row: 1/2;
   justify-self: end;
-  margin-right: 73px;
-  margin-top: 27px;
   border: none;
 }
 .view {
@@ -415,7 +398,6 @@ body {
   grid-row: 2/3;
   justify-self: end;
   margin-right: 168px;
-  margin-bottom: 40px;
 }
 .current-page {
   color: var(--brown);
@@ -426,9 +408,8 @@ body {
   color: var(--white);
 }
 .sort-box {
-  outline: 5px solid orange;
-  width: 1200px;
   padding: 29px 73px 31px;
+  border-bottom: 1px solid var(--gray-for-line);
 }
 .filter-item {
   margin-right: 32px;
@@ -483,48 +464,52 @@ body {
 .inactive:hover {
   opacity: 1;
 }
-.search-results {
-  width: 1200px;
-}
-.housing-list {
+
+.housing-item {
   display: grid;
-  grid-template-columns: 113px 1fr 113px;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 73px 135px 145px 1fr min-content 73px;
+  grid-template-rows: 50px 28px 72px;
+  border-bottom: 1px solid var(--gray-for-line);
 }
-.housing-item-1 {
- grid-column: 2/3;
- grid-row: 1/2;
- padding: 30px 0px;
- outline: 5px solid teal;
+
+.photo {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  align-self: center;
 }
-.housing-item-2 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding: 30px 0px;
-  outline: 5px solid lightcoral;
- }
- .housing-item-3 {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  padding: 30px 0px;
-  outline: 5px solid plum;
- }
+
 .title-housing {
   margin: 0;
   padding: 0;
+  grid-column: 3/5;
+  grid-row: 1/2;
+  margin-left: 29px;
+  margin-top: 24px;
+  margin-bottom: 7px;
+}
+.housing-parametres,
+.housing-cost-parametres {
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+}
+.housing-parametres {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  margin-left: 29px;
+
+}
+.housing-cost-parametres {
+  grid-column: 4/5;
+  grid-row: 2/3;
 }
 .housing-name:hover {
   color: var(--blue);
 }
 .housing-name:focus {
   opacity: 0.3;
-}
-.housing-parametres {
-  line-height: 21px;
-  font-weight: 400;
-  color: var(--dark);
-  margin: 0;
-  padding: 0;
 }
 .details {
   width: 110px;
@@ -534,6 +519,10 @@ body {
   color: var(--white);
   background-color: var(--blue);
   border: none;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin-left: 29px;
+  margin-top: 16px;
 }
 .details:hover {
   background-color: var(--dark-blue);
@@ -549,12 +538,20 @@ body {
   color: var(--white);
   background-color: var(--brown);
   border: none;
+  grid-column: 4/5;
+  grid-row: 3/4;
+  margin-top: 16px;
 }
 .book:hover {
   background-color: var(--dark-brown);
 }
 .book:focus {
   background-color: var(--extra-dark-brown);
+}
+.grade {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  align-self: flex-end;
 }
 .rating {
   width: 110px;
@@ -563,4 +560,8 @@ body {
   text-align: center;
   color: var(--dark-gray);
   background-color: var(--light-gray);
+  grid-column: 5/6;
+  grid-row: 3/4;
+  align-self: flex-end;
+  margin-bottom: 30px;
 }
