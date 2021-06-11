@@ -362,24 +362,25 @@ body {
 .filters {
   background-image: url("../img/filter-background.jpg");
   background-size: cover;
-
+  padding: 27px 73px 31px 73px;
 }
 .filter-form {
   display: grid;
-  grid-template-columns: 200px 400px 600px;
+  grid-template-columns: 127px 400px 1fr;
   grid-template-rows: 149px 68px;
-  padding: 27px 73px 31px 73px;
 }
 .infrastructure-field {
   grid-column: 1/2;
   grid-row: 1/3;
   border: none;
+  padding: 0;
 }
 .type-house-field{
   grid-column: 2/3;
   grid-row: 1/3;
   justify-self: center;
   border: none;
+  padding: 0;
 }
 .cost-field {
   width: 317px;
@@ -387,6 +388,7 @@ body {
   grid-row: 1/2;
   justify-self: end;
   border: none;
+  padding: 0;
 }
 .view {
   text-transform: uppercase;
@@ -398,6 +400,7 @@ body {
   grid-row: 2/3;
   justify-self: end;
   margin-right: 168px;
+  padding: 0;
 }
 .current-page {
   color: var(--brown);
@@ -406,6 +409,14 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: var(--white);
+  margin-bottom: 24px;
+}
+.parameter-item {
+  margin-bottom: 25px;
+}
+
+.cost-field .parameter {
+  margin-bottom: 17px;
 }
 .sort-box {
   padding: 29px 73px 31px;
@@ -464,16 +475,16 @@ body {
 .inactive:hover {
   opacity: 1;
 }
-
 .housing-item {
   display: grid;
-  grid-template-columns: 73px 135px 145px 1fr min-content 73px;
+  grid-template-columns: 165px 115px 1fr min-content;
   grid-template-rows: 50px 28px 72px;
   border-bottom: 1px solid var(--gray-for-line);
+  padding: 0 73px 30px 73px;
 }
 
 .photo {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 1/4;
   align-self: center;
 }
@@ -481,9 +492,8 @@ body {
 .title-housing {
   margin: 0;
   padding: 0;
-  grid-column: 3/5;
+  grid-column: 2/4;
   grid-row: 1/2;
-  margin-left: 29px;
   margin-top: 24px;
   margin-bottom: 7px;
 }
@@ -496,14 +506,14 @@ body {
   padding: 0;
 }
 .housing-parametres {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 2/3;
-  margin-left: 29px;
-
+  align-self: flex-end;
 }
 .housing-cost-parametres {
-  grid-column: 4/5;
+  grid-column: 3/4;
   grid-row: 2/3;
+  align-self: flex-end;
 }
 .housing-name:hover {
   color: var(--blue);
@@ -519,9 +529,8 @@ body {
   color: var(--white);
   background-color: var(--blue);
   border: none;
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 3/4;
-  margin-left: 29px;
   margin-top: 16px;
 }
 .details:hover {
@@ -538,7 +547,7 @@ body {
   color: var(--white);
   background-color: var(--brown);
   border: none;
-  grid-column: 4/5;
+  grid-column: 3/4;
   grid-row: 3/4;
   margin-top: 16px;
 }
@@ -549,7 +558,7 @@ body {
   background-color: var(--extra-dark-brown);
 }
 .grade {
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 1/2;
   align-self: flex-end;
 }
@@ -557,10 +566,11 @@ body {
   width: 110px;
   height: 27px;
   line-height: 21px;
+  font-weight: 400;
   text-align: center;
   color: var(--dark-gray);
   background-color: var(--light-gray);
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 3/4;
   align-self: flex-end;
   margin-bottom: 30px;
