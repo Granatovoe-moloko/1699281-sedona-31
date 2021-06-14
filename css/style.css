@@ -28,6 +28,7 @@
   --light-gray: #F2F2F2;
   --gray: #CACACA;
   --gray-for-line: #E5E5E5;
+  --focus-gray: #BDBBBC;
   --hover-gray: #EBEBEB;
   --brown: #766357;
   --dark-brown: #604E43;
@@ -323,6 +324,12 @@ body {
   grid-column: 3/4;
   justify-self: center;
 }
+.logo-htmlacademy:hover svg path{
+fill: var(--blue)
+}
+.logo-htmlacademy:focus svg path{
+  fill: var(--focus-gray)
+  }
 .hashtag {
   font-size: 21px;
   margin: 0;
@@ -362,7 +369,7 @@ body {
 .filters {
   background-image: url("../img/filter-background.jpg");
   background-size: cover;
-  padding: 27px 73px 0 73px;
+  padding: 27px 73px 31px 73px;
 }
 .filter-form {
   display: grid;
@@ -390,9 +397,7 @@ body {
   height: 36px;
   border: 2px solid var(--white);
   background: transparent;
-
-  margin-right: 168px;
-  margin-bottom: 32px;
+  margin: 33px 168px 0 0; 
   padding: 0;
 }
 .current-page {
