@@ -14,17 +14,18 @@
       </a>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a class="navigation-link">Информация</a></li>
-          <li><a href="#" class="navigation-link">Фото и видео</a></li>
-          <li><a href="#" class="navigation-link">Карта штата</a></li>
-          <li><a href="catalog.html" class="navigation-link">Гостиницы</a></li>
+            <li class="navigation-item"><a class="navigation-link">Информация</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Фото и видео</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Карта штата</a></li>
+            <li class="navigation-item"><a href="catalog.html" class="navigation-link">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="main-container">
-      <img src="img/greeting.svg" width="1200" height="509" alt="Welcome to the gorgeous Sedona" class="greeting">
-
+      <div class="greeting-container">
+        <img src="img/greeting.svg" width="1200" height="509" alt="Welcome to the gorgeous Sedona" class="greeting">
+      </div>
       <section>
         <div class="lead">
         <h1 class="caption">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
@@ -67,15 +68,15 @@
             </div>
           </li>
           <li class="special special-left">
-            <h3 class="reason">небольшая площадь</h3>
+            <h3 class="reason">небольшая <br> площадь</h3>
             <p class="reason-description">все достопримечательности находятся очень близко</p>
           </li>
           <li class="special special-center">
-            <h3 class="reason">красивая дорога</h3>
+            <h3 class="reason">красивая <br> дорога</h3>
             <p class="reason-description">ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
           <li class="special special-right">
-            <h3 class="reason">мало туристов</h3>
+            <h3 class="reason">мало <br> туристов</h3>
             <p class="reason-description">большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
@@ -86,13 +87,13 @@
         <p class="text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button type="button" class="search">ПОИСК ГОСТИНИЦЫ В седоне</button>
         <form action="https://echo.htmlacademy.ru" method="post" class="form">
-          <label for="check-in">Дата заезда:</label>
+          <label for="check-in" class="form-labels">Дата заезда:</label>
           <input id="check-in" type="text" name="date-check-in" value="24 апреля 2017" class="input date">
-          <label for="exit">Дата выезда:</label>
+          <label for="exit" class="form-labels">Дата выезда:</label>
           <input id="exit" type="text" name="date-exit" value="4 июля 2017" class="input date">
-          <label for="adult">Взрослые:</label>
+          <label for="adult" class="form-labels">Взрослые:</label>
           <input id="adult" type="text" name="adult" value="2" class="input visitor">
-          <label for="children">Дети:</label>
+          <label for="children" class="form-labels">Дети:</label>
           <input id="children" type="text" name="children" value="0" class="input visitor">
           <button type="submit" class="find">Найти</button>
         </form>
