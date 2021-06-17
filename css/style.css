@@ -321,9 +321,6 @@ body {
   width: 343px;
   height: 38px;
   background-color: var(--light-gray);
-  background-image: url("../img/icon/calendar.svg");
-  background-position: 316px center;
-  background-repeat: no-repeat;
 }
 .date:nth-child(2) {
   margin: 55px 55px 29px 0;
@@ -415,6 +412,9 @@ body {
   display: flex;
   margin-top: 43px;
 }
+.logo-htmlacademy {
+  height: 34px;
+}
 .logo-htmlacademy:hover svg path{
 fill: var(--blue)
 }
@@ -428,6 +428,7 @@ fill: var(--blue)
   margin-bottom: 9px;
 }
 .filter-list,
+.filter-sorting-list,
 .social-list,
 .housing-list {
   list-style: none;
@@ -518,15 +519,13 @@ fill: var(--blue)
 .sort-box {
   padding: 29px 73px 31px;
   border-bottom: 1px solid var(--gray-for-line);
+  display: flex;
+}
+.filter-sorting-list {
+  display: flex;
 }
 .filter-item {
   margin-right: 32px;
-}
-.result,
-.sort,
-.filter-list,
-.filter-item {
-  display: inline-block;
 }
 .option,
 .view {
