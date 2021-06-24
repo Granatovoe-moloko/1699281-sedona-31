@@ -29,13 +29,13 @@
       <section>
         <div class="lead">
         <h1 class="caption">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
-        <h2 class="hidden-name">Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <p class="five-advantage">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
         <ol class="reason-list">
           <li class="real-city">
             <div class="box real-city">
-              <h3 class="reason-gallery">Настоящий городок</h3>
+              <h3 class="reason-gallery">Настоящий<br> городок</h3>
               <p class="reason-description-gallery">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
           </li>
@@ -63,7 +63,7 @@
           </li>
           <li class="devil-bridge">
             <div class="box">
-              <h3 class="reason-gallery">Там есть Мост дьявола</h3>
+              <h3 class="reason-gallery">Там есть<br> Мост дьявола</h3>
               <p class="reason-description-gallery">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </li>
@@ -88,19 +88,27 @@
         <button type="button" class="search">ПОИСК ГОСТИНИЦЫ В седоне</button>
         <form action="https://echo.htmlacademy.ru" method="post" class="form">
           <label for="check-in" class="form-labels">Дата заезда:</label>
-          <input id="check-in" type="text" name="date-check-in" value="24 апреля 2017" class="input date">
+          <div class="input-date-container">
+            <input id="check-in" type="text" name="date-check-in" value="24 апреля 2017" class="input date">
+          </div>
           <label for="exit" class="form-labels">Дата выезда:</label>
-          <input id="exit" type="text" name="date-exit" value="4 июля 2017" class="input date">
+          <div class="input-date-container">
+            <input id="exit" type="text" name="date-exit" value="4 июля 2017" class="input date">
+          </div>
           <label for="adult" class="form-labels">Взрослые:</label>
-          <input id="adult" type="text" name="adult" value="2" class="input visitor">
+          <div class="input-visitor-container">
+            <input id="adult" type="text" name="adult" value="2" class="input visitor">
+          </div>
           <label for="children" class="form-labels">Дети:</label>
-          <input id="children" type="text" name="children" value="0" class="input visitor">
+          <div class="input-visitor-container">
+            <input id="children" type="text" name="children" value="0" class="input visitor">
+          </div>
           <button type="submit" class="find">Найти</button>
         </form>
       </section>
 
       <section class="map">
-        <h2 class="hidden-name">Карта проезда</h2>
+        <h2 class="visually-hidden">Карта проезда</h2>
         <a href="#">
           <img src="img/map.jpg" width="1199" height="594" alt="карта с адресом организации">
         </a>
@@ -110,12 +118,12 @@
 
     <footer class="footer">
       <section class="contacts">
-        <h2 class="hidden-name">Контакты</h2>
+        <h2 class="visually-hidden">Контакты</h2>
         <p class="hashtag">#visitSEDONA</p>
         <a href="tel:+78005558628" class="link tel">+7 800 555-86-28</a>
       </section>
       <section class="socials">
-        <h2 class="hidden-name">Мы в социальных сетях</h2>
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social-list">
           <li>
             <a href="#" class="link-social">

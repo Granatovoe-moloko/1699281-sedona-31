@@ -28,6 +28,7 @@
   --light-gray: #F2F2F2;
   --gray: #CACACA;
   --gray-for-line: #E5E5E5;
+  --gray-for-elements: #A9A9A9;
   --focus-gray: #BDBBBC;
   --hover-gray: #EBEBEB;
   --brown: #766357;
@@ -55,6 +56,7 @@ body {
   color: var(--black);
   text-transform: uppercase;
   background-color: var(--white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .main-header {
@@ -119,8 +121,17 @@ body {
   display: flex;
   justify-content: center;
 }
-.hidden-name {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .five-advantage {
   text-align: center;
@@ -197,6 +208,62 @@ body {
   margin: 0;
   margin-top: 47px;
   margin-bottom: 69px;
+  position: relative;
+}
+.real-city .reason-gallery::after {
+  content: "— №1 —";
+  position: absolute;
+  width: 51px; 
+  height: 21px;
+  top: 68px;
+  left: 175px;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.devil-bridge .reason-gallery::after {
+  content: "— №2 —";
+  position: absolute;
+  width: 51px; 
+  height: 21px;
+  top: 68px;
+  left: 175px;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.special-left .reason::after {
+  content: "— №3 —";
+  position: absolute;
+  width: 51px; 
+  height: 21px;
+  top: 68px;
+  left: 79px;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.special-center .reason::after {
+  content: "— №4 —";
+  position: absolute;
+  width: 51px; 
+  height: 21px;
+  top: 68px;
+  left: 104px;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.special-right .reason::after {
+  content: "— №5 —";
+  position: absolute;
+  width: 51px; 
+  height: 21px;
+  top: 68px;
+  left: 98px;
+  line-height: 21px;
+  font-weight: 400;
+  font-size: 14px;
 }
 .reason-description-gallery {
   line-height: 21px;
@@ -213,6 +280,7 @@ body {
   margin: 0;
   margin-top: 47px;
   margin-bottom: 69px;
+  position: relative;
 }
 .reason-description {
   font-size: 14px;
@@ -233,6 +301,30 @@ body {
   margin: 0;
   margin-top: 160px;
   margin-bottom: 25px;
+  position: relative;
+}
+.home .necessary::before {
+  content: url("../img/icon/icon-home.svg");
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  top: -100px;
+}
+.food .necessary::before {
+  content: url("../img/icon/icon-food.svg");
+  position: absolute;
+  width: 75px;
+  height: 70px;
+  top: -99px;
+  left: 163px;
+}
+.gift .necessary::before {
+  content: url("../img/icon/icon-gift.svg");
+  position: absolute;
+  width: 64px;
+  height: 77px;
+  top: -105px;
+  left: 168px;
 }
 .necessary-description {
   line-height: 21px;
@@ -294,46 +386,32 @@ body {
   background-color: var(--extra-dark-brown);
 }
 .form {
-  width: 568px;
-  height: 395px;
+  width: 458px;
+  height: 340px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 55px 55px 0 55px;
 }
 .form-labels {
   width: 100px;
+  line-height: 40px;
 }
-.form-labels:first-child {
-  margin: 61px 0 41px 55px;
+.form-labels[for="children"] {
+  width: 47px;
+  margin-left: 43px;
 }
-.form-labels:nth-child(3) {
-  margin: 0;
-  margin-bottom: 42px;
-  margin-left: 55px;
-}
-.form-labels:nth-child(5) {
-  margin: 0 0 60px 55px;
-}
-.form-labels:nth-last-child(3) {
-  width: 68px;
-  margin: 0 0 60px 53px;
-}
+
 .date {
-  width: 343px;
+  width: 334px;
   height: 38px;
   background-color: var(--light-gray);
-}
-.date:nth-child(2) {
-  margin: 55px 55px 29px 0;
-}
-.date:nth-child(4) {
-  margin: 0 55px 30px 0;
 }
 .visitor {
   width: 114px;
   height: 38px;
   background-color: var(--light-gray);
 }
-
 .input {
   border: none;
 }
@@ -345,10 +423,12 @@ body {
   text-transform: uppercase;
 }
 .date[type=text] {
+  padding: 0;
   padding-left: 13px;
 }
 .visitor[type=text] {
   text-align: center;
+  padding: 0;
 }
 .input:hover {
   background-color: var(--hover-gray);
@@ -357,7 +437,37 @@ body {
 .input:focus {
   background-color: var(--white);
 }
-
+.input-date-container {
+  width: 346px;
+  height: 38px;
+  position: relative;
+}
+.input-date-container::after {
+  content: url("../img/icon/calendar.svg");
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.input-visitor-container {
+  width: 114px;
+  height: 38px;
+  position: relative;
+}
+.input-visitor-container::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  background-color: var(--gray-for-elements);
+  top: 18px;
+  left: 14px;
+}
+.input-visitor-container::after {
+  content: url("../img/icon/union.svg");
+  position: absolute;
+  top: 7px;
+  right: 13px;
+}
 .find {
   width: 458px;
   height: 58px;
