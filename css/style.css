@@ -304,27 +304,33 @@ body {
   position: relative;
 }
 .home .necessary::before {
-  content: url("../img/icon/icon-home.svg");
+  content: "";
   position: absolute;
   width: 75px;
   height: 72px;
   top: -100px;
+  background-image: url("../img/icon/icon-home.svg");
+  background-repeat: no-repeat;
 }
 .food .necessary::before {
-  content: url("../img/icon/icon-food.svg");
+  content: "";
   position: absolute;
   width: 75px;
   height: 70px;
   top: -99px;
   left: 163px;
+  background-image: url("../img/icon/icon-food.svg");
+  background-repeat: no-repeat;
 }
 .gift .necessary::before {
-  content: url("../img/icon/icon-gift.svg");
+  content: "";
   position: absolute;
   width: 64px;
   height: 77px;
   top: -105px;
   left: 168px;
+  background-image: url("../img/icon/icon-gift.svg");
+  background-repeat: no-repeat;
 }
 .necessary-description {
   line-height: 21px;
@@ -443,10 +449,12 @@ body {
   position: relative;
 }
 .input-date-container::after {
-  content: url("../img/icon/calendar.svg");
+  content: "";
   position: absolute;
   top: 7px;
   right: 7px;
+  background-image: url("../img/icon/calendar.svg");
+  background-repeat: no-repeat;
 }
 .input-visitor-container {
   width: 114px;
@@ -463,10 +471,12 @@ body {
   left: 14px;
 }
 .input-visitor-container::after {
-  content: url("../img/icon/union.svg");
+  content: "";
   position: absolute;
   top: 7px;
   right: 13px;
+  background-image: url("../img/icon/union.svg");
+  background-repeat: no-repeat;
 }
 .find {
   width: 458px;
