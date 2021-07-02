@@ -668,17 +668,17 @@ fill: var(--blue)
   height: 21px;
   position: relative;
 }
-.range-controls .scale {
+.scale {
   width: 316px;
   height: 2px;
-  background-color: var(--white);
-  opacity: 0.3;
+  background-color: rgba(255,255,255,30%);
+  
 }
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background-color: var(--white);
-  opacity: 1;
+  background-color: rgba(255,255,255,100%);
+  
 }
 .range-controls .toggle {
   width: 4px;
@@ -698,16 +698,18 @@ fill: var(--blue)
 }
 .range-controls .toggle-max {
   left: 80%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-  0 0 0 1px var(--black);
+}
+.range-controls .toggle:hover {
+  transform: scale(1.2);
 }
 .range-controls .toggle:active {
   transform: scale(1.2);
 }
 .price-controls {
-  width: 317px;
-  height: 36px;
+  width: 313px;
+  height: 32px;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
@@ -715,32 +717,38 @@ fill: var(--blue)
    
 }
 .input-min-price,
-.input-max-price {
+.input-max-price,
+.min-price,
+.max-price {
 font-family: PT Sans;
 font-weight: 400;
 font-size: 14px;
 line-height: 21px;
 color: var(--white);
-text-align: center;
 }
+
+.min-price-container {
+  margin: auto 25px auto 66px;
+}
+.max-price-container {
+  margin: auto 25px auto 53px;
+}
+
 .input-min-price:focus,
 .input-max-price:focus {
   outline: none;
 }
-.price-controls .input-min-price,
-.price-controls .input-max-price {
-  width: 99px;
-  height: 36px;
+.input-min-price,
+.input-max-price {
+  width: 50px;
+  max-width: 70px;
   background: transparent;
   margin:0;
   padding: 0;
   border: none;
 }
-.min-price,
-.max-price {
-  margin: 0 30px;
-}
-.max-price::before {
+
+.price-controls::after {
   content: "";
   position: absolute;
   width: 2px;
@@ -757,6 +765,10 @@ text-align: center;
   background: transparent;
   margin: 33px 95px 0 84px; 
   padding: 0;
+}
+.view:hover{
+  background-color: var(--white);
+  color: var(--black)
 }
 .current-page {
   color: var(--brown);
@@ -786,7 +798,7 @@ text-align: center;
   background-image: url("../img/icon/checkbox-off.svg");
   background-repeat: no-repeat;
   top: 0;
-  left: -39px;
+  left: -40px;
 }
 .check:disabled + label::before {
   background-image: url("../img/icon/checkbox-off-disabled.svg");
@@ -803,6 +815,9 @@ text-align: center;
 }
 .check:checked:disabled + label::before {
   background-image: url("../img/icon/checkbox-on-disabled.svg");
+}
+.option {
+  max-width: max-content;
 }
 .cost-field .parameter {
   margin-bottom: 17px;
@@ -862,9 +877,10 @@ text-align: center;
   font-weight: 400;
   text-decoration: none;
 }
+
 .sorting-link:hover {
   color: var(--blue);
-  border-bottom: 1px dashed var(--blue);
+  border-bottom: 1px dotted var(--blue);
 }
 .sorting-link:focus {
   color: var(--black);
@@ -875,8 +891,8 @@ text-align: center;
   color: var(--blue);
 }
 .inactive {
-  border-bottom: 1px dashed var(--blue);
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted var(--blue);
 }
 .inactive:hover {
   opacity: 1;
@@ -930,6 +946,8 @@ text-align: center;
   width: 110px;
   height: 27px;
   text-align: center;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 21px;
   color: var(--white);
   background-color: var(--blue);
@@ -937,6 +955,7 @@ text-align: center;
   grid-column: 2/3;
   grid-row: 3/4;
   margin-right: 6px;
+  text-transform: uppercase;
 }
 .details:hover {
   background-color: var(--dark-blue);
@@ -948,12 +967,15 @@ text-align: center;
   width: 142px;
   height: 27px;
   text-align: center;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 21px;
   color: var(--white);
   background-color: var(--brown);
   border: none;
   grid-column: 3/4;
   grid-row: 3/4;
+  text-transform: uppercase;
 }
 .book:hover {
   background-color: var(--dark-brown);
@@ -996,5 +1018,5 @@ text-align: center;
   background-color: var(--light-gray);
   grid-column: 4/5;
   grid-row: 3/4;
-  
+  margin-left: auto;
 }
