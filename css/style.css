@@ -42,9 +42,8 @@
 }
 
 body {
-  /*
   min-height: 100%;
-  display: grid;
+  /*display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   padding: 0;*/
@@ -62,9 +61,7 @@ body {
 
 .main-header {
   display: flex;
-  flex-direction: column;
-  padding: 0 72px;
-   
+  flex-direction: column; 
 }
 .logo-city-of-Sedona {
   width: 138px;
@@ -76,13 +73,13 @@ body {
   margin-bottom: -55px;
   position: absolute;
 }
-
 .site-navigation {
   list-style: none;
   margin: 0;
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 56px;
 }
 .link{
   text-decoration: none;
@@ -92,11 +89,18 @@ body {
   text-decoration: none;
   color: var(--brown);
 }
-.navigation-item:nth-child(2) {
-  margin-right: 133px;
+.navigation-item {
+  margin: auto 0;
+}
+.navigation-item:first-child {
+  margin-left: 72px;
 }
 .navigation-item:nth-child(3) {
-  margin-left: 147px;
+  margin-left: auto;
+}
+.navigation-item:nth-child(4) {
+  margin-left: auto;
+  margin-right: 72px;
 }
 .navigation-link[href] {
   color: var(--black);
@@ -525,7 +529,7 @@ body {
   vertical-align:middle
 }
 
-.input-date-container:hover svg path,
+.calendar-container:hover svg path,
 .add-adult-container:hover svg path,
 .reduce-adult-container:hover svg rect,
 .add-children-container:hover svg path,
@@ -533,7 +537,7 @@ body {
   fill: var(--black)
 }
 
-.input-date-container:active svg path,
+.calendar-container:active svg path,
 .add-adult-container:active svg path,
 .reduce-adult-container:active svg rect,
 .add-children-container:active svg path,
