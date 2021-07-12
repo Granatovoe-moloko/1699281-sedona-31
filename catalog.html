@@ -78,8 +78,8 @@
                         <div class="scale">
                           <div class="bar"></div>
                         </div>
-                        <div class="toggle toggle-min"></div>
-                        <div class="toggle toggle-max"></div>
+                        <button type="button" class="toggle toggle-min"></button>
+                        <button type="button" class="toggle toggle-max"></button>
                       </div>
                     </div>
                     <button type="submit" class="view">Показать</button>
@@ -91,19 +91,23 @@
             <h2 class="result">Найдено: 3</h2>
             <p class="sort">Сортировка:</p>
             <ul class="filter-sorting-list">
-                <li class="filter-item"><a href="#" class="sorting-link active">По цене</a></li>
+                <li class="filter-item"><a class="sorting-link active">По цене</a></li>
                 <li class="filter-item"><a href="#" class="sorting-link inactive">По типу</a></li>
                 <li class="filter-item"><a href="#" class="sorting-link inactive">По рейтингу</a></li>
             </ul>
-            <div class="filter inactive-filter" aria-label="сортировка результатов в прямом порядке">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
-              </svg>
+            <div class="filter">
+              <a href="#" aria-label="сортировка результатов в прямом порядке" class="inactive-filter">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                </svg>
+              </a>
             </div>
-            <div class="filter active-filter" aria-label="сортировка результатов в обратном порядке">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10L0 0H11" fill="#CACACA"/>
-              </svg>
+            <div class="filter">
+              <a href="#"  aria-label="сортировка результатов в обратном порядке" class="active-filter">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#CACACA"/>
+                </svg>
+              </a>
             </div>
         </section>
 

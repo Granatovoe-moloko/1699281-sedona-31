@@ -61,7 +61,7 @@ body {
 
 .main-header {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 .logo-city-of-Sedona {
   width: 138px;
@@ -72,6 +72,9 @@ body {
   align-self: center;
   margin-bottom: -55px;
   position: absolute;
+}
+.logo:focus {
+  outline: 1px solid var(--blue);
 }
 .site-navigation {
   list-style: none;
@@ -110,6 +113,7 @@ body {
 }
 .navigation-link[href]:focus {
   color: var(--blue);
+  outline: none;
 }
 .navigation-link[href]:active {
   opacity: 0.3;
@@ -240,7 +244,7 @@ body {
 .real-city .reason-gallery::after {
   content: "— №1 —";
   position: absolute;
-  width: 51px; 
+  width: 51px;
   height: 21px;
   top: 68px;
   left: 175px;
@@ -251,7 +255,7 @@ body {
 .devil-bridge .reason-gallery::after {
   content: "— №2 —";
   position: absolute;
-  width: 51px; 
+  width: 51px;
   height: 21px;
   top: 68px;
   left: 175px;
@@ -262,7 +266,7 @@ body {
 .special-left .reason::after {
   content: "— №3 —";
   position: absolute;
-  width: 51px; 
+  width: 51px;
   height: 21px;
   top: 68px;
   left: 79px;
@@ -273,7 +277,7 @@ body {
 .special-center .reason::after {
   content: "— №4 —";
   position: absolute;
-  width: 51px; 
+  width: 51px;
   height: 21px;
   top: 68px;
   left: 104px;
@@ -284,7 +288,7 @@ body {
 .special-right .reason::after {
   content: "— №5 —";
   position: absolute;
-  width: 51px; 
+  width: 51px;
   height: 21px;
   top: 68px;
   left: 98px;
@@ -298,7 +302,7 @@ body {
   color: var(--white);
   padding: 0;
   margin: 0 40px ;
-  
+
 }
 .reason {
   font-size: 21px;
@@ -418,6 +422,7 @@ body {
 }
 .search:focus {
   background-color: var(--dark-brown);
+  outline: none;
 }
 .search:active {
   background-color: var(--extra-dark-brown);
@@ -478,6 +483,7 @@ input.input::placeholder {
 
 .input:focus {
   background-color: var(--white);
+  outline: 2px solid var(--gray-for-line);
 }
 .input-date-container {
   width: 346px;
@@ -537,7 +543,6 @@ input.input::placeholder {
 .add-children {
   vertical-align:middle
 }
-
 .calendar-container:hover svg path,
 .add-adult-container:hover svg path,
 .reduce-adult-container:hover svg rect,
@@ -550,7 +555,14 @@ input.input::placeholder {
 .reduce-adult-container:focus svg rect,
 .add-children-container:focus svg path,
 .reduce-children-container:focus svg rect{
-  fill: var(--black)
+  fill: var(--black);
+}
+.calendar-container:focus,
+.add-adult-container:focus,
+.reduce-adult-container:focus,
+.add-children-container:focus,
+.reduce-children-container:focus{
+  outline: none;
 }
 
 .calendar-container:active svg path,
@@ -578,6 +590,7 @@ input.input::placeholder {
 }
 .find:focus {
   background-color: var(--dark-blue);
+  outline: none;
 }
 .find:active {
   background-color: var(--extra-dark-blue);
@@ -629,8 +642,12 @@ input.input::placeholder {
 fill: var(--blue)
 }
 .logo-htmlacademy:focus svg path{
-  fill: var(--blue)
+  fill: var(--blue);
+  outline: none;
   }
+  .logo-htmlacademy:focus{
+    outline: none;
+    }
 .logo-htmlacademy:active svg path{
   fill: var(--focus-gray)
   }
@@ -639,7 +656,7 @@ fill: var(--blue)
   margin: 0;
   padding: 0;
   margin-bottom: 9px;
-  
+
 }
 .tel {
   display: block;
@@ -666,6 +683,7 @@ fill: var(--blue)
 }
 .link-social:focus {
   background-color: var(--dark-blue);
+  outline: none;
 }
 .link-social:active {
   background-color: var(--extra-dark-blue);
@@ -725,13 +743,13 @@ fill: var(--blue)
   width: 316px;
   height: 2px;
   background-color: rgba(255,255,255,30%);
-  
+
 }
 .range-controls .bar {
   width: 80%;
   height: 2px;
   background-color: rgba(255,255,255,100%);
-  
+
 }
 .range-controls .toggle {
   width: 4px;
@@ -744,6 +762,7 @@ fill: var(--blue)
   top: -9px;
   left: 0;
   cursor: pointer;
+  padding: 2px;
 }
 .range-controls .toggle-min {
   left: 0;
@@ -754,6 +773,10 @@ fill: var(--blue)
 }
 .range-controls .toggle:hover {
   transform: scale(1.2);
+}
+.range-controls .toggle:focus {
+  transform: scale(1.2);
+  outline: none;
 }
 .range-controls .toggle:active {
   transform: scale(1.2);
@@ -767,7 +790,7 @@ fill: var(--blue)
   border: 2px solid #FFFFFF;
   border-radius: 2px;
   position: relative;
-   
+
 }
 .input-min-price,
 .input-max-price,
@@ -816,7 +839,7 @@ color: var(--white);
   height: 36px;
   border: 2px solid var(--white);
   background: transparent;
-  margin: 33px 95px 0 84px; 
+  margin: 33px 95px 0 84px;
   padding: 0;
 }
 .view:hover{
@@ -825,7 +848,8 @@ color: var(--white);
 }
 .view:focus{
   background-color: var(--white);
-  color: var(--black)
+  color: var(--black);
+  outline: none;
 }
 .current-page {
   color: var(--brown);
@@ -873,6 +897,9 @@ color: var(--white);
 .check:checked:disabled + label::before {
   background-image: url("../img/icon/checkbox-on-disabled.svg");
 }
+.check:focus ~ .option {
+  outline: 1px solid var(--white);
+}
 .option {
   max-width: max-content;
 }
@@ -903,10 +930,20 @@ color: var(--white);
 .active-filter svg path {
   fill: var(--blue)
 }
-.filter:hover svg path {
+.active-filter:hover svg path,
+.inactive-filter:hover svg path {
   fill: var(--black)
 }
-.filter:active svg path {
+.active-filter:focus svg path,
+.inactive-filter:focus svg path {
+  fill: var(--black);
+}
+.active-filter:focus,
+.inactive-filter:focus {
+  outline: none;
+}
+.active-filter:active svg path,
+.inactive-filter:active svg path {
   fill: var(--blue)
 }
 .option,
@@ -935,19 +972,6 @@ color: var(--white);
   text-decoration: none;
 }
 
-.sorting-link:hover {
-  color: var(--blue);
-  border-bottom: 1px dotted var(--blue);
-}
-.sorting-link:focus {
-  color: var(--blue);
-  border-bottom: 1px dotted var(--blue);
-}
-.sorting-link:active {
-  color: var(--black);
-  border-bottom: none;
-
-}
 .active {
   color: var(--blue);
 }
@@ -956,8 +980,20 @@ color: var(--white);
   border-bottom: 1px dotted var(--blue);
 }
 .inactive:hover {
+  color: var(--blue);
+  border-bottom: 1px dotted var(--blue);
   opacity: 1;
 }
+.inactive:focus {
+  color: var(--blue);
+  border-bottom: 1px dotted var(--blue);
+  outline: none;
+}
+.inactive:active {
+  color: var(--black);
+  border-bottom: none;
+}
+
 .housing-item {
   display: grid;
   grid-template-columns: 165px auto 1fr min-content;
@@ -1006,6 +1042,7 @@ color: var(--white);
 }
 .housing-name:focus {
   color: var(--blue);
+  outline: none;
 }
 .housing-name:active {
   opacity: 0.3;
@@ -1030,6 +1067,7 @@ color: var(--white);
 }
 .details:focus {
   background-color: var(--dark-blue);
+  outline: none;
 }
 .details:active {
   background-color: var(--extra-dark-blue);
@@ -1054,6 +1092,7 @@ color: var(--white);
 }
 .book:focus {
   background-color: var(--dark-brown);
+  outline: none;
 }
 .book:active {
   background-color: var(--extra-dark-brown);
