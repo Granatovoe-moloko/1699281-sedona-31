@@ -491,20 +491,17 @@ input.input::placeholder {
   position: relative;
   margin-bottom: 29px;
 }
-.calendar-in {
+.calendar-container {
   width: 21px;
   height: 23px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   position: absolute;
   top: 7px;
   right: 7px;
 }
-.calendar-out {
-  width: 21px;
-  height: 23px;
-  position: absolute;
-  top: 7px;
-  right: 7px;
-}
+
 .input-visitor-container {
   width: 114px;
   height: 38px;
