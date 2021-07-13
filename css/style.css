@@ -599,7 +599,6 @@ input.input::placeholder {
   width: 1199px;
   height: 594px;
 }
-
 .footer {
   display: grid;
   grid-template-columns: 400px 400px 400px;
@@ -656,7 +655,6 @@ fill: var(--blue)
 .logo-htmlacademy:active svg path{
   fill: var(--focus-gray)
 }
-
 .filter-list,
 .filter-sorting-list,
 .social-list,
@@ -699,7 +697,6 @@ fill: var(--blue)
   padding: 0;
   margin-right: 15px;
 }
-
 .filters {
   width: 1054px;
   background-image: url("../img/filter-background.jpg");
@@ -743,7 +740,6 @@ fill: var(--blue)
   width: 80%;
   height: 2px;
   background-color: rgba(255,255,255,100%);
-
 }
 .range-controls .toggle {
   width: 4px;
