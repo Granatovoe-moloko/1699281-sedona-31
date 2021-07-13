@@ -418,7 +418,6 @@ body {
   text-transform: uppercase;
   border: none;
   padding: 0;
-
 }
 .search:hover {
   background-color: var(--dark-brown);
