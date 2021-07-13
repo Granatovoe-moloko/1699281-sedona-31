@@ -43,10 +43,10 @@
 
 body {
   min-height: 100%;
-  /*display: grid;
+  display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  padding: 0;*/
+  padding: 0;
   width: 1200px;
   margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
