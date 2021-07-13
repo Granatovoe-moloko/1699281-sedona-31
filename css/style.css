@@ -81,7 +81,7 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: 56px;
 }
 .link{
@@ -96,14 +96,18 @@ body {
   margin: auto 0;
 }
 .navigation-item:first-child {
-  margin-left: 72px;
+  text-align: left;
+  padding-left: 72px;
+}
+.navigation-item:nth-child(2) {
+  text-align: left;
 }
 .navigation-item:nth-child(3) {
-  margin-left: auto;
+  text-align: right;
 }
-.navigation-item:nth-child(4) {
-  margin-left: auto;
-  margin-right: 72px;
+.navigation-item:last-child {
+  text-align: right;
+  padding-right: 72px;
 }
 .navigation-link[href] {
   color: var(--black);
@@ -126,7 +130,6 @@ body {
   background-size: 100% 57px, cover;
   background-repeat: no-repeat;
   background-position: bottom, center;
-  margin-bottom: 43px;
   padding-top: 77px;
 }
 .greeting {
@@ -135,7 +138,10 @@ body {
   display: block;
   margin: 0 auto 81px auto;
 }
-
+.lead {
+  margin-top: 43px;
+  margin-bottom: 51px;
+}
 
 .caption {
   height: 80px;
@@ -165,13 +171,13 @@ body {
   color: var(--dark);
   padding: 0;
   margin: 0;
-  margin-bottom: 51px;
+  margin-top: 17px;
 }
 .reason-list {
   list-style: none;
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 256px 300px 256px 256px;
+  grid-template-rows: 256px 330px 256px 256px;
   margin: 0;
   padding: 0;
 }
@@ -214,17 +220,17 @@ body {
 .special-left {
   grid-column: 1/2;
   grid-row: 4/5;
-  padding: 0 96px;
+  /*padding: 0 96px;*/
 }
 .special-center {
   grid-column: 2/3;
   grid-row: 4/5;
-  padding: 0 71px;
+  /*padding: 0 71px;*/
 }
 .special-right {
   grid-column: 3/4;
   grid-row: 4/5;
-  padding: 0 77px;
+  /*padding: 0 77px;*/
 }
 .photo-Sedona,
 .photo-Canyon {
@@ -244,8 +250,8 @@ body {
 .real-city .reason-gallery::after {
   content: "— №1 —";
   position: absolute;
-  width: 51px;
-  height: 21px;
+  min-width: 51px;
+  min-height: 21px;
   top: 68px;
   left: 175px;
   line-height: 21px;
@@ -255,8 +261,8 @@ body {
 .devil-bridge .reason-gallery::after {
   content: "— №2 —";
   position: absolute;
-  width: 51px;
-  height: 21px;
+  min-width: 51px;
+  min-height: 21px;
   top: 68px;
   left: 175px;
   line-height: 21px;
@@ -266,10 +272,10 @@ body {
 .special-left .reason::after {
   content: "— №3 —";
   position: absolute;
-  width: 51px;
-  height: 21px;
+  min-width: 51px;
+  min-height: 21px;
   top: 68px;
-  left: 79px;
+  left: 174px;
   line-height: 21px;
   font-weight: 400;
   font-size: 14px;
@@ -277,10 +283,10 @@ body {
 .special-center .reason::after {
   content: "— №4 —";
   position: absolute;
-  width: 51px;
-  height: 21px;
+  min-width: 51px;
+  min-height: 21px;
   top: 68px;
-  left: 104px;
+  left: 174px;
   line-height: 21px;
   font-weight: 400;
   font-size: 14px;
@@ -288,10 +294,10 @@ body {
 .special-right .reason::after {
   content: "— №5 —";
   position: absolute;
-  width: 51px;
-  height: 21px;
+  min-width: 51px;
+  min-height: 21px;
   top: 68px;
-  left: 98px;
+  left: 174px;
   line-height: 21px;
   font-weight: 400;
   font-size: 14px;
@@ -301,16 +307,14 @@ body {
   font-weight: 400;
   color: var(--white);
   padding: 0;
-  margin: 0 40px ;
+  margin: 0 auto ;
 
 }
 .reason {
   font-size: 21px;
   line-height: 21px;
   padding: 0;
-  margin: 0;
-  margin-top: 47px;
-  margin-bottom: 69px;
+  margin: 47px auto 69px auto;
   position: relative;
 }
 .reason-description {
@@ -389,8 +393,7 @@ body {
   line-height: 24px;
   text-align: center;
   padding: 0;
-  margin: 0;
-  margin-bottom: 4px;
+  margin: 0 457px 4px 446px;
 }
 .text {
   width: 435px;
@@ -443,7 +446,7 @@ body {
 }
 .form-labels[for="children"] {
   width: 47px;
-  margin-left: 43px;
+  margin-left: 37px;
 }
 
 .date-check-in,
@@ -527,8 +530,8 @@ input.input::placeholder {
 .add-adult-container,
 .add-children-container {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: 1px;
+  right: 2px;
   width: 35px;
   height: 38px;
   border: none;
@@ -576,6 +579,7 @@ input.input::placeholder {
   text-align: center;
   font-size: 21px;
   color: var(--white);
+  text-transform: uppercase;
   background-color: var(--blue);
   border: none;
   margin: 0 auto;
@@ -610,10 +614,21 @@ input.input::placeholder {
   opacity: 0.9;
 }
 .contacts {
-  width: 200px;
   grid-column: 1/2;
-  justify-self: center;
   margin-top: 23px;
+}
+.hashtag {
+  width: 166px;
+  font-size: 21px;
+  display: block;
+  margin: 0 0 9px 153px;
+  text-align: center;
+}
+.tel {
+  width: 200px;
+  display: block;
+  margin: 0;
+  margin-left: 136px;
   text-align: center;
 }
 .socials {
@@ -628,9 +643,8 @@ input.input::placeholder {
 }
 .site {
   grid-column: 3/4;
-  justify-self: center;
   display: flex;
-  margin-top: 43px;
+  margin: 43px 131px 0 auto;
 }
 .logo-htmlacademy {
   height: 34px;
@@ -641,23 +655,14 @@ fill: var(--blue)
 .logo-htmlacademy:focus svg path{
   fill: var(--blue);
   outline: none;
-  }
-  .logo-htmlacademy:focus{
-    outline: none;
-    }
+}
+.logo-htmlacademy:focus{
+  outline: none;
+}
 .logo-htmlacademy:active svg path{
   fill: var(--focus-gray)
-  }
-.hashtag {
-  font-size: 21px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 9px;
+}
 
-}
-.tel {
-  display: block;
-}
 .filter-list,
 .filter-sorting-list,
 .social-list,
@@ -705,7 +710,7 @@ fill: var(--blue)
   width: 1054px;
   background-image: url("../img/filter-background.jpg");
   background-size: cover;
-  padding: 27px 73px 31px 73px;
+  padding: 27px 73px 31px 72px;
 }
 .filter-form {
   display: grid;
@@ -733,14 +738,12 @@ fill: var(--blue)
 }
 .range-controls {
   width: 316px;
-  height: 21px;
   position: relative;
 }
 .scale {
   width: 316px;
   height: 2px;
   background-color: rgba(255,255,255,30%);
-
 }
 .range-controls .bar {
   width: 80%;
@@ -782,7 +785,6 @@ fill: var(--blue)
   width: 313px;
   height: 32px;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
@@ -799,7 +801,6 @@ font-size: 14px;
 line-height: 21px;
 color: var(--white);
 }
-
 .min-price-container {
   margin: auto 25px auto 66px;
 }
@@ -819,6 +820,7 @@ color: var(--white);
   margin:0;
   padding: 0;
   border: none;
+  padding-left: 0px;
 }
 
 .price-controls::after {
@@ -827,8 +829,8 @@ color: var(--white);
   width: 2px;
   height: 22px;
   background-color: var(--white);
-  bottom: 7px;
-  left: 159px;
+  bottom: 5px;
+  left: 157px;
 }
 .view {
   text-transform: uppercase;
@@ -858,10 +860,16 @@ color: var(--white);
   font-size: 16px;
   line-height: 21px;
   color: var(--white);
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+}
+.cost-field .parameter {
+  margin-bottom: 11px;
 }
 .parameter-item {
   margin-bottom: 25px;
+}
+.parameter-item:last-child {
+  margin-bottom: 0;
 }
 .parameter-item label {
   position: relative;
@@ -899,9 +907,6 @@ color: var(--white);
 }
 .option {
   max-width: max-content;
-}
-.cost-field .parameter {
-  margin-bottom: 17px;
 }
 .sort-box {
   padding: 29px 73px 31px;
@@ -960,6 +965,9 @@ color: var(--white);
   margin-right: 46px;
 }
 .sort {
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 400;
   margin-right: 40px;
 }
 .sorting-link {
@@ -996,16 +1004,18 @@ color: var(--white);
   grid-template-columns: 165px auto 1fr min-content;
   grid-template-rows: auto auto auto;
   border-bottom: 1px solid var(--gray-for-line);
-  padding: 30px 73px;
+  padding: 24px 73px 30px 73px;
 }
 
 .photo {
   grid-column: 1/2;
   grid-row: 1/4;
+  margin-top: 7px;
 }
 .catalog-img {
   width: 135px;
   height: 90px;
+  display: block;
 }
 
 .title-housing {
@@ -1013,7 +1023,6 @@ color: var(--white);
   padding: 0;
   grid-column: 2/4;
   grid-row: 1/2;
-  margin-bottom: 7px;
 }
 .housing-parametres,
 .housing-cost-parametres {
@@ -1027,13 +1036,14 @@ color: var(--white);
   grid-column: 2/3;
   grid-row: 2/3;
   margin-right: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .housing-cost-parametres {
   grid-column: 3/4;
   grid-row: 2/3;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
+
 .housing-name:hover {
   color: var(--blue);
 }
@@ -1097,11 +1107,10 @@ color: var(--white);
 .grade {
   grid-column: 4/5;
   grid-row: 1/2;
-  margin: 0;
+  margin: 5px 0 0 auto;
   padding: 0;
   background-image: url("../img/icon/star.svg");
   height: 17px;
-  margin-left: auto;
 }
 .one-stars {
   width: 23px;
