@@ -447,7 +447,6 @@ body {
   width: 47px;
   margin-left: 37px;
 }
-
 .date-check-in,
 .date-check-out {
   width: 334px;
@@ -482,7 +481,6 @@ input.input::placeholder {
 .input:hover {
   background-color: var(--hover-gray);
 }
-
 .input:focus {
   background-color: var(--white);
   outline: 2px solid var(--gray-for-line);
@@ -503,7 +501,6 @@ input.input::placeholder {
   top: 7px;
   right: 7px;
 }
-
 .input-visitor-container {
   width: 114px;
   height: 38px;
@@ -563,7 +560,6 @@ input.input::placeholder {
 .reduce-children-container:focus{
   outline: none;
 }
-
 .calendar-container:active svg path,
 .add-adult-container:active svg path,
 .reduce-adult-container:active svg rect,
@@ -571,7 +567,6 @@ input.input::placeholder {
 .reduce-children-container:active svg rect{
   fill: var(--blue)
 }
-
 .find {
   width: 458px;
   height: 58px;
