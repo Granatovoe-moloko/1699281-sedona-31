@@ -109,7 +109,7 @@
           </div>
           <label for="adult" class="form-labels">Взрослые:</label>
           <div class="input-visitor-container">
-            <input id="adult" type="text" name="adult" placeholder="2" class="input visitor" autocomplete="off">
+            <input id="adult" type="text" name="adult" placeholder="2" class="input adult-visitor" autocomplete="off">
             <button type="button" class="reduce-adult-container" aria-label="уменьшить количество взрослых посетителей">
               <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="reduce-adult">
                 <rect width="12" height="3" fill="#A9A9A9"/>
@@ -123,7 +123,7 @@
           </div>
           <label for="children" class="form-labels">Дети:</label>
           <div class="input-visitor-container">
-            <input id="children" type="text" name="children" placeholder="0" class="input visitor" autocomplete="off">
+            <input id="children" type="text" name="children" placeholder="0" class="input children-visitor" autocomplete="off">
             <button type="button" class="reduce-children-container" aria-label="уменьшить количество детей">
               <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg" class="reduce-children">
                 <rect width="12" height="3" fill="#A9A9A9"/>
@@ -141,9 +141,9 @@
 
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
-        <a href="#" aria-label="ссылка на карту с адресом организации">
-          <img src="img/map.jpg" width="1199" height="594" alt="карта с адресом организации" class="map-img">
-        </a>
+        <img src="img/map.jpg" width="1199" height="594" alt="карта с адресом организации" class="map-img">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1277775.9477303799!2d-112.03222655237515!3d34.615774076440246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1626532324494!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" loading="lazy" class="modal-map"></iframe>
+        <button type="button" class="map-close">Закрыть</button>
       </section>
 
     </main>
@@ -201,5 +201,6 @@
         </a>
       </section>
     </footer>
+    <script src="js/form.js"></script>
   </body>
 </html>

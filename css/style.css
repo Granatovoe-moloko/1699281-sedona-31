@@ -15,7 +15,7 @@
   font-weight: 700;
   font-style: normal;
 }
-/*комментарий для обновления архива*/
+
 :root {
   --white: #FFFFFF;
   --black: #000000;
@@ -35,6 +35,11 @@
   --brown: #766357;
   --dark-brown: #604E43;
   --extra-dark-brown: #503E33;
+  --shadow-black: rgba(0, 1, 1, 0.2);
+  --scale-white: rgba(255,255,255,30%);
+  --bar-white: rgba(255,255,255,100%);
+  --semitransparent-gray: rgba(0, 0, 0, 0.25);
+  --inactive-gray: rgba(0, 0, 0, 0.3);
 }
 
 .page {
@@ -55,7 +60,7 @@ body {
   color: var(--black);
   text-transform: uppercase;
   background-color: var(--white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--shadow-black);
 }
 .main-header {
   display: flex;
@@ -428,14 +433,38 @@ body {
 }
 .form {
   width: 458px;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 55px 55px 0 55px;
   position: absolute;
   background-color: var(--white);
-  bottom: -394px;
+  top: 291px;
+  z-index: 1;
 }
+.form-show {
+  display: flex;
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-50px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
 .form-labels {
   width: 100px;
   line-height: 40px;
@@ -468,7 +497,14 @@ input.input::placeholder {
   padding: 0;
   padding-left: 13px;
 }
-.visitor[type=text] {
+.adult-visitor[type=text] {
+  text-align: center;
+  width: 44px;
+  height: 38px;
+  background-color: var(--light-gray);
+  padding: 0 35px;
+}
+.children-visitor[type=text] {
   text-align: center;
   width: 44px;
   height: 38px;
@@ -590,13 +626,34 @@ input.input::placeholder {
 .map {
   width: 1199px;
   height: 594px;
+  position: relative;
   margin-bottom: -120px;
 }
 .map-img {
   width: 1199px;
   height: 594px;
+  
+}
+.modal-map {
+  display: none;
+  border: 5px solid var(--white);
+  box-shadow: 10px 10px 20px var(--shadow-black);
+  left: 0;
+  right: 0;
+  top: 5px;
+  margin: auto;
+}
+.map-close {
+  right: 220px;
+  top: 5px;
+  display: none;
+}
+.map-show {
+  display: block;
+  position: absolute;
 }
 .footer {
+  
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 120px;
@@ -663,7 +720,6 @@ fill: var(--blue)
 .link-social {
   width: 46px;
   height: 48px;
-  display: inline-block;
   background-color: var(--blue);
   text-align: center;
   display: flex;
@@ -731,12 +787,12 @@ fill: var(--blue)
 .scale {
   width: 316px;
   height: 2px;
-  background-color: rgba(255,255,255,30%);
+  background-color: var(--scale-white);
 }
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background-color: rgba(255,255,255,100%);
+  background-color: var(--bar-white);
 }
 .range-controls .toggle {
   width: 4px;
@@ -744,7 +800,7 @@ fill: var(--blue)
   background-color: var(--toggle-gray);
   border: 8px solid var(--white);
   border-radius: 50%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px var(--semitransparent-gray);
   position: absolute;
   top: -9px;
   left: 0;
@@ -781,7 +837,7 @@ fill: var(--blue)
 .input-max-price,
 .min-price,
 .max-price {
-font-family: PT Sans;
+font-family: "PT Sans", "Arial", sans-serif;
 font-weight: 400;
 font-size: 14px;
 line-height: 21px;
@@ -967,7 +1023,7 @@ color: var(--white);
   color: var(--blue);
 }
 .inactive {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--inactive-gray);
   border-bottom: 1px dotted var(--blue);
 }
 .inactive:hover {
